@@ -1,5 +1,5 @@
 compile:
-	fvm dart compile jit-snapshot -o build/aerosome.jit bin/aerospace_scripts.dart
+	fvm dart compile exe -o build/aerosome bin/aerosome.dart
 
 run:
-	fvm dart run bin/aerospace_scripts.dart
+	fvm dart run bin/aerosome.dart
