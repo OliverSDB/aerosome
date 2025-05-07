@@ -14,12 +14,11 @@ void moveToWs(String i) async {
 
 Future<String> _getWorkspaceId(String i) async {
   String id = '0';
+  int space = int.parse(i);
+
   await mon.get().then((m) {
-    int monitor = m - 1;
-    if (monitor == 0) {
-      return id = i;
-    }
-    return id = "$monitor$i";
+    return id = (space + ((m - 1) * 10)).toString();
   });
+
   return id;
 }
